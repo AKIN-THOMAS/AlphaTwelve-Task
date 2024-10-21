@@ -820,6 +820,7 @@ h2 {
 
   .carousel-caption {
     font-size: 0.8rem;
+    margin-top: -100px;
   }
 
   .accordion-toggle {
