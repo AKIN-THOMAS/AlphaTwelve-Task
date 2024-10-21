@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bishop's Event Management Task</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <!-- Hamburger menu for mobile view -->
+    <div class="hamburger-menu" id="hamburgerMenu">
+      <img src="images/Logo.svg" alt="Full Logo" class="logo-hamburger" />
+
+      <img src="images/hamburger.svg" />
+    </div>
+
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+      <!-- Expanded Logo -->
+      <div class="logo-expanded">
+        <img src="images/Logo.svg" alt="Full Logo" />
+      </div>
+      <!-- Collapsed Logo -->
+      <div class="logo-collapsed">
+        <img src="images/collaspedLogo.svg" alt="Collapsed Logo" />
+      </div>
+      <ul class="nav-list">
+        <li>
+          <a href="#" class="nav-item"
+            ><img src="images/collaspedHome.svg" />
+            <span class="nav-text">Home</span></a
+          >
+        </li>
+        <li>
+          <a href="#" class="nav-item"
+            ><img src="images/collaspedEvents.svg" />
+            <span class="nav-text">Events</span></a
+          >
+        </li>
+        <li>
+          <a href="#" class="nav-item"
+            ><img src="images/collaspedSpeakers.svg" />
+            <span class="nav-text">Speakers</span></a
+          >
+        </li>
+        <li>
+          <a href="#" class="nav-item"
+            ><img src="images/collaspedReports.svg" />
+            <span class="nav-text">Reports</span></a
+          >
+        </li>
+        <li>
+          <a href="#" class="nav-item"
+            ><img src="images/collaspedNotification.svg" />
+            <span class="nav-text">Notifications</span></a
+          >
+        </li>
+        <li>
+          <a href="#" class="nav-item"
+            ><img src="images/collaspedMsg.svg" />
+            <span class="nav-text">Messages</span></a
+          >
+        </li>
+        <li>
+          <a href="#" class="nav-item"
+            ><img src="images/collaspedSettings.svg" />
+            <span class="nav-text">Settings</span></a
+          >
+        </li>
+        <li id="collapseBtn">
+          <a href="#" class="nav-item"
+            ><img src="images/collaspedRight.svg" />
+            <span class="nav-text">Collapse</span></a
+          >
+        </li>
+        <li>
+          <a href="#" class="nav-item">
+            <label class="toggle-switch">
+              <input type="checkbox" id="toggleDarkMode" />
+              <span class="slider"></span>
+            </label>
+            <span class="nav-text">Dark mode</span>
+          </a>
+        </li>
+
+        <li class="user-info">
+          <div>
+            <img src="images/collaspedProfile.svg" />
+          </div>
+          <div>
+            <p class="menu-text">Rudra Devi</p>
+            <p class="menu-text">rudra.devi@gmail.com</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content" id="mainContent">
+      <div class="maintxt">
+        <p>Welcome! here’s your summary</p>
+      </div>
+
+      <div class="event-summary-cards">
+        <div class="card">
+          <div class="card-content">
+            <h3>
+              Total Events
+              <img src="images/i.svg" />
+            </h3>
+            <div class="card_down">
+              <p>100,000</p>
+              <span><img src="images/arrow-up-right.svg" /> +50%</span>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-content">
+            <h3>
+              Active Speakers
+              <img src="images/i.svg" />
+            </h3>
+            <div class="card_down1">
+              <p>25</p>
+              <span><img src="images/arrow-down-right.svg" /> +50%</span>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-content">
+            <h3>
+              Total Registrations
+              <img src="images/i.svg" />
+            </h3>
+            <div class="card_down">
+              <p>300</p>
+              <span><img src="images/arrow-up-right.svg" /> +50%</span>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-content">
+            <h3>
+              Total Revenue
+              <img src="images/i.svg" />
+            </h3>
+            <div class="card_down">
+              <p>$500,000</p>
+              <span><img src="images/arrow-up-right.svg" /> +50%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Events and News Carousel -->
+      <div class="maintxt2">
+        <p>Event Registrations per month</p>
+      </div>
+      <div class="events-section">
+        <!-- Graph Section -->
+        <div class="chart-container">
+          <canvas id="eventChart"></canvas>
+        </div>
+
+        <!-- Carousel Section -->
+        <div class="carousel-container">
+          <div class="carousel-slide">
+            <!-- Slide 1 -->
+            <div class="carousel-item">
+              <div class="carousel-img">
+                <img src="images/slide1.jpg" alt="News Image 1" />
+              </div>
+              <div class="carousel-caption">
+                <h4>Latest News & Updates</h4>
+                <p>
+                  Turpis interdum nunc varius ornare dignissim pretium. Massa
+                  ornare quis aliquet sed vitae. Sed velit nisi, fermentum erat.
+                  Fringilla purus, erat fringilla tincidunt quisque non.
+                  Pellentesque in ut tellus.
+                </p>
+              </div>
+            </div>
+            <!-- Slide 2 -->
+            <div class="carousel-item">
+              <div class="carousel-img">
+                <img src="images/slide2.jpg" alt="News Image 2" />
+              </div>
+              <div class="carousel-caption">
+                <h4>Latest News & Updates</h4>
+                <p>
+                  Turpis interdum nunc varius ornare dignissim pretium. Massa
+                  ornare quis aliquet sed vitae. Sed velit nisi, fermentum erat.
+                  Fringilla purus, erat fringilla tincidunt quisque non.
+                  Pellentesque in ut tellus.
+                </p>
+              </div>
+            </div>
+            <!-- Slide 3 -->
+            <div class="carousel-item">
+              <div class="carousel-img">
+                <img src="images/slide3.jpg" alt="News Image 3" />
+              </div>
+              <div class="carousel-caption">
+                <h4>Latest News & Updates</h4>
+                <p>
+                  Turpis interdum nunc varius ornare dignissim pretium. Massa
+                  ornare quis aliquet sed vitae. Sed velit nisi, fermentum erat.
+                  Fringilla purus, erat fringilla tincidunt quisque non.
+                  Pellentesque in ut tellus.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Carousel Controls -->
+          <button class="carousel-prev">❮</button>
+          <button class="carousel-next">❯</button>
+        </div>
+      </div>
+
+      <div class="eventHistory">
+        <div class="maintxt2">
+          <p>Event History</p>
+        </div>
+        <div class="table-container">
+          <!-- Search and Filters Section -->
+          <div class="table-controls">
+            <div class="filters">
+              <div class="search-bar">
+                <input
+                  type="text"
+                  placeholder="Search..."
+                  class="search-input"
+                />
+              </div>
+              <select class="filter" id="date-filter">
+                <option value="date">Date</option>
+              </select>
+              <select class="filter" id="status-filter">
+                <option value="status">Status</option>
+              </select>
+              <select class="filter" id="name-filter">
+                <option value="name">Name</option>
+              </select>
+              <p class="display">Displaying 100 results</p>
+            </div>
+            <div class="sort-export">
+             <div>
+                <p>Sort</p>
+                <select class="sort">
+                  <option value="most-recent">Most Recent</option>
+                  <option value="oldest">Oldest</option>
+                </select>
+             </div>
+              <div>
+                <div class="sort">
+                    <img src="images/options.svg" />
+                  </div>
+                  <button class="export-btn">
+                    <img class="expImg" src="images/export.svg" />
+                    Export
+                  </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Table for Desktop View -->
+          <table class="event-table desktop-view">
+            <thead>
+              <tr>
+                <th>Event Name</th>
+                <th>Date</th>
+                <th>Speaker</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Cloud Innovation Summit</td>
+                <td>2024-10-15</td>
+                <td>Jane Doe</td>
+                <td><span class="status completed"><img src="images/complete.svg"/>Completed</span></td>
+              </tr>
+              <tr>
+                <td>Blockchain Revolution Conference</td>
+                <td>2024-11-05</td>
+                <td>Dr. Peter Smith</td>
+                <td><span class="status in-progress"><img src="images/in-progress.svg"/>In Progress</span></td>
+              </tr>
+              <tr>
+                <td>AI in Healthcare Symposium</td>
+                <td>2024-12-01</td>
+                <td>John Lee</td>
+                <td><span class="status completed"><img src="images/complete.svg"/> Completed</span></td>
+              </tr>
+              <tr>
+                <td>Future of Fintech Forum</td>
+                <td>2024-10-25</td>
+                <td>Dr. Aisha Malik</td>
+                <td><span class="status completed"><img src="images/complete.svg"/>Completed</span></td>
+              </tr>
+              <tr>
+                <td>Data Analytics in Business</td>
+                <td>2024-11-12</td>
+                <td>Rachel Moore</td>
+                <td><span class="status completed"><img src="images/complete.svg"/>Completed</span></td>
+              </tr>
+              <tr>
+                <td>Sustainable Energy Expo</td>
+                <td>2024-09-28</td>
+                <td>Prof. Alan Green</td>
+                <td><span class="status completed"><img src="images/complete.svg"/>Completed</span></td>
+              </tr>
+              <tr>
+                <td>Web3 Interfaces Workshop</td>
+                <td>2024-10-10</td>
+                <td>Kevin Adams</td>
+                <td><span class="status in-progress"><img src="images/in-progress.svg"/>In Progress</span></td>
+              </tr>
+              <tr>
+                <td>Cybersecurity for Startups</td>
+                <td>2024-11-09</td>
+                <td>Emily Zhang</td>
+                <td><span class="status completed"><img src="images/complete.svg"/>Completed</span></td>
+              </tr>
+              <tr>
+                <td>Smart Cities Forum</td>
+                <td>2024-10-18</td>
+                <td>Dr. Maria Hernandez</td>
+                <td><span class="status completed"><img src="images/complete.svg"/>Completed</span></td>
+              </tr>
+              <tr>
+                <td>Tech Safari Mixer</td>
+                <td>2024-09-30</td>
+                <td>Guest Panel</td>
+                <td><span class="status completed"><img src="images/complete.svg"/>Completed</span></td>
+              </tr>
+            </tbody>
+          </table>
+
+          <!-- Mobile -->
+          <div class="event-modal" id="eventModal">
+            <div class="modal-content">
+              <span class="close-button">&times;</span>
+              <h2 id="modalEventName">Event Name</h2>
+              <p class="modalp" id="modalEventDate">Event Date</p>
+              <p class="modalp" id="modalEventDescription">Event Description</p>
+              <div class="modal-speakers">
+                <img src="images/avatar.svg" alt="Speaker 1">
+              </div>
+              <p class="modalp" id="modalEventSpeakers">3 Guest Speakers: Speaker A, Speaker B, Speaker C. 300 Attendees</p>
+              <div class="modalBtn">
+                <button class="modal-btn edit-btn">Edit</button>
+                <button class="modal-btn delete-btn">Delete</button>
+                <button class="modal-btn complete-btn">Mark as Completed</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Pagination Section -->
+          <div class="pagination-container desktop-page">
+            <ul class="pagination">
+                <li class="page-item prev ">
+                    <a href="#" aria-label="Previous">&lt;</a>
+                </li>
+                <li class="page-item active">
+                    <a href="#">1</a>
+                </li>
+                <li class="page-item">
+                    <a href="#">2</a>
+                </li>
+                <li class="page-item">
+                    <a href="#">3</a>
+                </li>
+                <li class="page-item next">
+                    <a href="#" aria-label="Next">&gt;</a>
+                </li>
+            </ul>
+            <ul>
+                <li class="page-item rows-per-page">
+                    <p>Show:</p>
+                    <select id="rows-per-page">
+                        <option value="10">10 rows</option>
+                        <option value="20">20 rows</option>
+                        <option value="30">30 rows</option>
+                    </select>
+                </li>
+            </ul>
+        </div>
+
+          <!-- Mobile View -->
+          <div class="mobile-view">
+            <div class="event-status">
+              <p>Event Name</p>
+              <p>Status</p>
+            </div>
+
+
+            <div class="event-card ">
+              <div class="accordion-toggle" onclick="toggleAccordionCard(this)">
+                <p class="eventp">Cloud Innovation Summit</p>
+                <p>
+                    <span class="status completed"><img src="images/complete.svg"/>Completed</span>
+                </p>
+              </div>
+
+              <div class="accordion-content">
+                <p class="eventp">Jane Doe</p>
+                <p>
+                    <span class="eventp">2024-10-05</span>
+                </p>
+              </div>
+            </div>
+
+            <div class="event-card ">
+                <div class="accordion-toggle" onclick="toggleAccordionCard(this)">
+                  <p class="eventp">Blockchain Revolution Conference</p>
+                  <p class="status in-progress">
+                    <img src="images/in-progress.svg"/>
+                    In Progess
+                  </p>
+                </div>
+  
+                <div class="accordion-content">
+                  <p class="eventp">Dr. Peter Smith</p>
+                  <p>
+                      <span class="eventp">2024-11-05</span>
+                  </p>
+                </div>
+              </div>
+              <div class="event-card ">
+                <div class="accordion-toggle" onclick="toggleAccordionCard(this)">
+                  <p class="eventp">AI in Healthcare Symposium</p>
+                  <p>
+                      <span class="status completed"><img src="images/complete.svg"/>Completed</span>
+                  </p>
+                </div>
+  
+                <div class="accordion-content">
+                  <p class="eventp">John Lee</p>
+                  <p>
+                      <span class="eventp">2024-12-01</span>
+                  </p>
+                </div>
+              </div>
+              <div class="event-card ">
+                <div class="accordion-toggle" onclick="toggleAccordionCard(this)">
+                  <p class="eventp">Future of Fintech Forum</p>
+                  <p>
+                      <span class="status completed"><img src="images/complete.svg"/>Completed</span>
+                  </p>
+                </div>
+  
+                <div class="accordion-content">
+                  <p class="eventp">Dr. Aisha Malik</p>
+                  <p>
+                      <span class="eventp">2024-10-25</span>
+                  </p>
+                </div>
+              </div>
+              <div class="event-card ">
+                <div class="accordion-toggle" onclick="toggleAccordionCard(this)">
+                  <p class="eventp">Data Analytics in Business</p>
+                  <p>
+                      <span class="status completed"><img src="images/complete.svg"/>Completed</span>
+                  </p>
+                </div>
+  
+                <div class="accordion-content">
+                  <p class="eventp">Rachel Moore</p>
+                  <p>
+                      <span class="eventp">2024-11-12</span>
+                  </p>
+                </div>
+              </div>
+              <div class="event-card ">
+                <div class="accordion-toggle" onclick="toggleAccordionCard(this)">
+                  <p class="eventp">Sustainable Energy Expo</p>
+                  <p>
+                      <span class="status completed"><img src="images/complete.svg"/>Completed</span>
+                  </p>
+                </div>
+  
+                <div class="accordion-content">
+                  <p class="eventp">Prof. Alan Green</p>
+                  <p>
+                      <span class="eventp">2024-09-28</span>
+                  </p>
+                </div>
+              </div>
+              <div class="event-card ">
+                <div class="accordion-toggle" onclick="toggleAccordionCard(this)">
+                  <p class="eventp">Web3 Interfaces Workshop</p>
+                  <p>
+                      <span class="status in-progress"><img src="images/in-progress.svg"/>In Progress</span>
+                  </p>
+                </div>
+  
+                <div class="accordion-content">
+                  <p class="eventp">Kevin Adams</p>
+                  <p>
+                      <span class="eventp">2024-10-10</span>
+                  </p>
+                </div>
+              </div>
+              <div class="event-card ">
+                <div class="accordion-toggle" onclick="toggleAccordionCard(this)">
+                  <p class="eventp">Cybersecurity for Startups</p>
+                  <p>
+                      <span class="status completed"><img src="images/complete.svg"/>Completed</span>
+                  </p>
+                </div>
+  
+                <div class="accordion-content">
+                  <p class="eventp">Emily Zhang</p>
+                  <p>
+                      <span class="eventp">2024-11-09</span>
+                  </p>
+                </div>
+              </div>
+              <div class="event-card ">
+                <div class="accordion-toggle" onclick="toggleAccordionCard(this)">
+                  <p class="eventp">Smart Cities Forum</p>
+                  <p>
+                      <span class="status completed"><img src="images/complete.svg"/>Completed</span>
+                  </p>
+                </div>
+  
+                <div class="accordion-content">
+                  <p class="eventp">Dr. Maria Hernandez</p>
+                  <p>
+                      <span class="eventp">2024-10-18</span>
+                  </p>
+                </div>
+              </div>
+              <div class="event-card ">
+                <div class="accordion-toggle" onclick="toggleAccordionCard(this)">
+                  <p class="eventp">Tech Safari Mixer</p>
+                  <p>
+                      <span class="status completed"><img src="images/complete.svg"/>Completed</span>
+                  </p>
+                </div>
+  
+                <div class="accordion-content">
+                  <p class="eventp">Guest Panel</p>
+                  <p>
+                      <span class="eventp">2024-09-30</span>
+                  </p>
+                </div>
+              </div>
+
+              <div class="pagination-container mobile-page">
+                <ul class="pagination">
+                    <li class="page-item prev disabled">
+                        <a href="#" aria-label="Previous">&lt;</a>
+                    </li>
+                    <li class="page-item active">
+                        <a href="#">1</a>
+                    </li>
+                    <li class="page-item">
+                        <a href="#">2</a>
+                    </li>
+                    <li class="page-item">
+                        <a href="#">3</a>
+                    </li>
+                    <li class="page-item next">
+                        <a href="#" aria-label="Next">&gt;</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="page-item rows-per-page">
+                        <p>Show:</p>
+                        <select id="rows-per-page">
+                            <option value="10">10 rows</option>
+                            <option value="20">20 rows</option>
+                            <option value="30">30 rows</option>
+                        </select>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Bottom Navigation (Visible only on mobile) -->
+            <nav class="bottom-navigation">
+                <ul>
+                <li>
+                    <a href="#">
+                        <img src="images/navhome.svg" /><span>Home</span>
+                    </a>
+                </li>
+                <li><a href="#"><img src="images/navcalendar.svg"/><span>Events</span></a></li>
+                <li><a href="#"><img src="images/navspeaker.svg"/><span>Speakers</span></a></li>
+                <li><a href="#"><img src="images/navreports.svg"/><span>Reports</span></a></li>
+                <li><a href="#"><img src="images/navprofile.svg"/><span>Profile</span></a></li>
+                </ul>
+            </nav>        
+    </div>
+
+    <!-- External Script -->
+    <script>
+        // Toggle accordion for mobile view
+        function toggleAccordionCard(element) {
+            var content = element.nextElementSibling;
+            content.style.display = content.style.display === "flex" ? "none" : "flex";
+        }
+    </script>
+    <script src="scripts.js"></script>
+  </body>
+</html>
