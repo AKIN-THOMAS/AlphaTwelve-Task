@@ -6,15 +6,6 @@
   font-family: "Inter", sans-serif;
 }
 
-body {
-  background-color: var(--background-color);
-  color: var(--text-color);
-  /* display: flex; */
-  width: 100%;
-  min-height: 100vh;
-  transition: background-color 0.3s ease;
-}
-
 /* Default (Light Mode) Variables */
 :root {
   --background-color: #fff;
@@ -66,6 +57,14 @@ body.dark-mode {
   --modaltext: #ffffff;
   --modal2: #ADA9BB;
 }
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    width: 100%;
+    min-height: 100vh;
+    transition: background-color 0.3s ease;
+  }
 
 /* Sidebar styles */
 .sidebar {
@@ -572,7 +571,6 @@ tr {
 .pagination {
   list-style-type: none;
   display: flex;
-  /* justify-content: space-between; */
   align-items: center;
   gap: 5px;
 }
@@ -628,7 +626,7 @@ tr {
 
 /* Bottom Navigation Styles */
 .bottom-navigation {
-  display: none; /* Hidden by default */
+  display: none; 
   position: fixed;
   bottom: 0;
   left: 0;

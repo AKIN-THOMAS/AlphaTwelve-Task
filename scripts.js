@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Chart.js logic
   const ctx = document.getElementById("eventChart").getContext("2d");
   const eventChart = new Chart(ctx, {
-    type: "bar", // Choose chart type (bar, line, etc.)
+    type: "bar", 
     data: {
       labels: [
         "Jan",
@@ -47,9 +47,9 @@ document.addEventListener("DOMContentLoaded", () => {
       datasets: [
         {
           label: "Event Registrations per Month",
-          data: [650, 950, 780, 420, 1000, 580, 850, 350, 620, 320, 980, 600], // Example data points
-          backgroundColor: "#8576FF", // Bars fill color
-          borderColor: "#F8FAFC", // Bars border color
+          data: [650, 950, 780, 420, 1000, 580, 850, 350, 620, 320, 980, 600], 
+          backgroundColor: "#8576FF", 
+          borderColor: "#F8FAFC", 
           borderWidth: 1,
         },
       ],
